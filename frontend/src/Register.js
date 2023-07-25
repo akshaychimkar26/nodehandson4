@@ -17,7 +17,7 @@ function Register() {
     e.preventDefault();
 
     try {
-      const response = await axios.post('https://register-login-api-2vrh.onrender.com/user/register', formData);
+      const response = await axios.post('https://register-login-api-lihs.onrender.com/user/register', formData);
       console.log(response.data);
 
       setFormData({
@@ -33,7 +33,7 @@ function Register() {
   return (
     <div>
       <h2 className='registerhead'>REGISTER</h2>
-      <form action='' method='post' onSubmit={submit}>
+      <form method='post' onSubmit={submit}>
         <fieldset className='field'>
             <legend>register</legend>
             <input type='text' placeholder='enter your name' name='name' onChange={handleChange} value={formData.name}/> <br/><br/>

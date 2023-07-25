@@ -17,7 +17,7 @@ function Login() {
     }
 
     try {
-      const response = await axios.post('https://register-login-api-k6y5.onrender.com/user/login',formData);
+      const response = await axios.post('https://register-login-api-lihs.onrender.com/user/login',formData);
       console.log(response.data);
 
       setFormData({
