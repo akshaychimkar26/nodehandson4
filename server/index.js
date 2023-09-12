@@ -1,28 +1,20 @@
-const http = require('http');
-const express = require("express");
-const userRoute=require('./Routes/route');
-const jsontoken = require('./middleware/auth');
-const bcrypt=require("bcrypt");
-const cors=require("cors");
+const express = require("express")
+const cors = require('cors')
+const dotenv = require('dotenv')
+const app=express()
 
-const app = express();
+const route = require('./Routes/route')
+dotenv.config()
 
-app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', '*'); 
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-    next();
-});
+app.use(cors({
+    origin:'*'
+}))
 
 app.use(express.json())
-app.use('/user',userRoute)
-const Port = 2090;
-const server = http.createServer(app);
-server.listen(Port, () => {
-    try {
-        console.log(`server is running on port no.${Port}`);
-    }
-    catch (err) {
-        console.log(err);
-    }
-});
+
+app.use('/user',route)
+const port = process.env.PORT || 2300
+
+app.listen(port,()=>{
+    console.log(`${port} running fine`);
+})

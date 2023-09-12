@@ -1,12 +1,11 @@
-const {register,login,aboutus,contactus} = require("../controller/user");
-const userRoute = require("express").Router();
-const {AllRoutes,specificRoutes}=require('../middleware/auth');
+const express = require("express")
+const { register, login, logout, allUsers } = require("../controller/user")
 
-// userRoute.use(AllRoutes);
+const route = express.Router()
 
-userRoute.post('/register',register);
-userRoute.post('/login',login)
-userRoute.get('/aboutus',aboutus)
-userRoute.get('/contactus',contactus)
+route.post('/register',register)
+route.post('/login',login)
+route.post('/logout',logout)
+route.get('/alluser',allUsers)
 
-module.exports = userRoute;
+module.exports = route
