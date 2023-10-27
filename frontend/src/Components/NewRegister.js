@@ -48,11 +48,6 @@ function NewRegister() {
       <div className="SignText">Sign up here</div>
       <div className="cardForm">
         <form className="SignupForm">
-          <img
-            className="lockImg"
-            src="https://www.freeiconspng.com/thumbs/secure-icon-png/lock-icon-17.png"
-            alt="Locked"
-          />
           <input
             className="sInp"
             type="text"

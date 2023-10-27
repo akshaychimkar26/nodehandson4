@@ -50,11 +50,6 @@ function Login() {
       <div className="loginText">Login here</div>
       <div className="loginForm">
         <div className="logComCon">
-          <img
-            className="lockImg"
-            src="https://www.freeiconspng.com/thumbs/secure-icon-png/lock-icon-17.png"
-            alt="Locked"
-          />
           <div className="Logcont1">
             <input
               className="lLoginInp"
