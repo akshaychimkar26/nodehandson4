@@ -22,7 +22,7 @@ function Login() {
   const handleButton = (e) => {
     e.preventDefault();
     const { email, password } = data;
-    const API = "https://register-login-api-6bft.onrender.com/user/login";
+    const API = "https://register-login-api-t9to.onrender.com/user/login";
     if (email && password) {
       axios.post(API, data)
         .then((res) => {

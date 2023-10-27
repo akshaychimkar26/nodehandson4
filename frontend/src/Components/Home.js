@@ -7,7 +7,7 @@ const navi = useNavigate()
 const [data, setData] = useState()
 const [store, setStore] = useState()
 const handleLogout=()=>{
-  const API = "https://register-login-api-6bft.onrender.com/user/logout"
+  const API = "https://register-login-api-t9to.onrender.com/user/logout"
   axios.post(API,data)
   .then(res=>{
     setStore(res.data);

@@ -18,7 +18,7 @@ function NewRegister() {
   const handleButton = (e) => {
     e.preventDefault();
     const { email, password } = data;
-    const API = "https://register-login-api-6bft.onrender.com/user/register"
+    const API = "https://register-login-api-t9to.onrender.com/user/register"
     
     setData({
       name: "",
